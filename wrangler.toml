@@ -1,0 +1,17 @@
+name = "my-cloudflare-worker-test"
+type = "javascript"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-02-05"
+
+[build.upload]
+format = "modules"
+dir = "./src"
+main = "./worker.js" # becomes "./src/worker.js"
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
